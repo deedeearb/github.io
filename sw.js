@@ -3,7 +3,8 @@ const urlsToCache = [
     '/',
     '/index.html',
     '/style.css',
-    '/script.js'
+    '/script.js',
+    '/assets/house.jpg'
     // Add image URLs if you download them locally
 ];
 
