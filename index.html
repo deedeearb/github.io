@@ -11,6 +11,7 @@
     <link rel="icon" href="icons/icon-192x192.png" sizes="192x192">
     <link rel="icon" href="icons/icon-512x512.png" sizes="512x512">
     <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=open_in_new" />
 </head>
 <body>
     <header>
@@ -32,35 +33,50 @@
         <div class="parallax"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Discover Austin Real Estate</h1>
+            <h1>Discover Your New Home</h1>
             <p>Your gateway to vibrant homes in the heart of Texas.</p>
             <a href="#properties" class="btn">Explore Properties</a>
         </div>
     </section>
 
     <section id="about">
-        <h2>About Austin Real Estate</h2>
-        <p>Austin offers a dynamic mix of modern living, tech innovation, and natural beauty. From sleek downtown condos to spacious suburban homes, find your perfect spot in this thriving city.</p>
+        <h2>About Real Estate</h2>
+        <p>Texas offers a dynamic mix of modern living, tech innovation, and natural beauty. From sleek downtown condos to spacious suburban homes, find your perfect spot in this thriving city.</p>
     </section>
 
     <section class="info-band band-1">
     <div class="band-overlay"></div>
-    <div class="band-content">
+    <div class="band-content-with-image">
+        <div class="band-image">
+        <img src="https://static.vecteezy.com/system/resources/previews/036/290/752/non_2x/online-home-loans-concept-flat-illustration-template-buy-and-sell-houses-online-mortgage-rent-money-investment-to-real-estate-purchase-property-home-bank-credit-residential-realty-asset-vector.jpg" 
+            alt="Happy young couple receiving keys to their new home after mortgage approval">
+        </div>
+        <div class="text-content">
         <h3>Unlock Your Dream Home with Smart Financing</h3>
         <p>Getting a mortgage in Austin doesn't have to be complicated. Explore options tailored to today's market.</p>
         <ul>
             <li>Conventional loans for strong credit</li>
             <li>FHA loans with lower down payments</li>
             <li>Local Texas programs for first-timers</li>
+            <li>Texas State Affordable Housing Corporation (TSAHC) <a href="https://www.tsahc.org/home-buyer-programs" target="_blank"><span class="material-symbols-outlined">
+open_in_new</span></a></li>
+            <li>Texas Department Housing & Community Affairs (TDHCA)<a href="https://welcomehome.tdhca.texas.gov/rates" target="_blank"><span class="material-symbols-outlined">
+open_in_new</span></a></li>
         </ul>
         <a href="#contact" class="btn">Get Pre-Approved Today</a>
+        </div>
     </div>
-</section>
+    </section>
 
-<section class="info-band band-2">
+    <section class="info-band band-2">
     <div class="band-overlay"></div>
-    <div class="band-content">
-        <h3>What Credit Score Do You Need to Buy in Austin?</h3>
+    <div class="band-content-with-image reverse">
+        <div class="band-image">
+        <img src="http://rcbbank.bank/wp-content/uploads/2023/12/Credit-Score-Range-02.jpg" 
+            alt="Credit score gauge showing ranges from poor to excellent for mortgage qualification">
+        </div>
+        <div class="text-content">
+        <h3>What Credit Score Do You Need to Buy a home?</h3>
         <p>A solid credit score opens doors to better rates and approvals.</p>
         <ul>
             <li>620+ for most conventional loans</li>
@@ -68,12 +84,18 @@
             <li>Tips to boost your score quickly</li>
         </ul>
         <a href="#contact" class="btn">Check Your Options</a>
+        </div>
     </div>
-</section>
+    </section>
 
-<section class="info-band band-3">
+    <section class="info-band band-3">
     <div class="band-overlay"></div>
-    <div class="band-content">
+    <div class="band-content-with-image">
+        <div class="band-image">
+        <img src="https://media.istockphoto.com/id/821679152/photo/late-dusk-sunset-on-modern-suburban-neighborhood-community-north-austin-texas-the-suburbs.jpg?s=1024x1024&w=is&k=20&c=ZEPYp3_LwsDa7SAPX09qd8twQjHFHK_0J7rq5vGr5NY=" 
+            alt="Aerial view of modern growing neighborhoods in Austin Texas with new homes">
+        </div>
+        <div class="text-content">
         <h3>Why Austin Neighborhoods Are Booming</h3>
         <p>From vibrant downtown to family-friendly suburbs, Austin has it all.</p>
         <ul>
@@ -82,12 +104,18 @@
             <li>Diverse communities for every lifestyle</li>
         </ul>
         <a href="#contact" class="btn">Find Your Neighborhood</a>
+        </div>
     </div>
-</section>
+    </section>
 
-<section class="info-band band-4">
+    <section class="info-band band-4">
     <div class="band-overlay"></div>
-    <div class="band-content">
+    <div class="band-content-with-image reverse">
+        <div class="band-image">
+        <img src="https://thumbs.dreamstime.com/z/couple-happy-young-clients-signing-mortgage-agreement-new-home-real-estate-agent-realtor-miniature-house-300001345.jpg" 
+            alt="Happy young couple signing papers with realtor for their first home purchase">
+        </div>
+        <div class="text-content">
         <h3>First-Time Buyer? We've Got Your Guide</h3>
         <p>Navigate the Austin market with confidence – from offer to closing.</p>
         <ul>
@@ -96,8 +124,9 @@
             <li>Expert tips for competitive offers</li>
         </ul>
         <a href="#contact" class="btn">Start Your Journey</a>
+        </div>
     </div>
-</section>
+    </section>
 
     <section id="properties">
         <h2>Featured Properties</h2>
@@ -134,7 +163,8 @@
         <p>&copy; 2025 Austin Real Estate. All rights reserved. Images from Unsplash.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" crossorigin="anonymous"></script>
+    <script src="mortagerate.js" crossorigin="anonymous"></script>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js')
