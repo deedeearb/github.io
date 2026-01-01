@@ -1,0 +1,332 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Hero with Parallax */
+#hero {
+    position: relative;
+    height: 100vh; /* Taller for parallax effect */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.parallax {
+    position: absolute;
+    height: 100%; /* Extra height for movement */
+    background-image: url('assets/house.jpg');
+    background-attachment: fixed; /* This creates the parallax */
+    /* transform: translateZ(0); /* Hardware acceleration */
+    z-index: 0;
+    background-position: center center; /* Anchors the skyline at the top for better parallax */
+    background-size: cover; /* Already there – keeps full width/height coverage */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    top: 0px;
+    width: 100vw; /* Forces true viewport full-width, overriding any parent constraints */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+/* Fallback for mobile (some browsers disable fixed on mobile) */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Falls back gracefully */
+        height: 100%;
+    }
+    
+    #hero {
+        height: 100vh;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Sections */
+section {
+    padding: 4rem 1rem;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* Properties */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.property {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.property:hover {
+    transform: scale(1.05);
+}
+
+.property img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Contact */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Full-Width Info Bands */
+.info-band {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Subtle parallax on desktop */
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Remove margin from the last band so footer isn't pushed too far */
+.info-band:last-child {
+    margin-bottom: 0;
+}
+
+/* Optional: Softer transition feel */
+.info-band {
+    transition: background 0.5s ease;
+}
+
+.band-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+}
+
+.band-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.info-band h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.info-band p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-band ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.info-band li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.info-band li::before {
+    content: "✓";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.info-band .btn {
+    background: #007bff;
+    border: 2px solid #fff;
+}
+
+.info-band .btn:hover {
+    background: #fff;
+    color: #007bff;
+}
+
+/* Specific Background Images */
+.band-1 {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/036/290/752/non_2x/online-home-loans-concept-flat-illustration-template-buy-and-sell-houses-online-mortgage-rent-money-investment-to-real-estate-purchase-property-home-bank-credit-residential-realty-asset-vector.jpg');
+}
+
+.band-2 {
+    background-image: url('https://media.istockphoto.com/id/1300878119/vector/credit-score-meter-set-gauge-business-report-concept-excellent-good-bad-poor-level-scale.jpg?s=612x612&w=is&k=20&c=RFUVGoNYAtmjSy7gxQb-zrhiutpUBnLtg8kWzAdPMNM=');
+}
+
+.band-3 {
+    background-image: url('https://media.istockphoto.com/id/821679152/photo/late-dusk-sunset-on-modern-suburban-neighborhood-community-north-austin-texas-the-suburbs.jpg?s=1024x1024&w=is&k=20&c=ZEPYp3_LwsDa7SAPX09qd8twQjHFHK_0J7rq5vGr5NY=');
+}
+
+.band-4 {
+    background-image: url('https://floridaconnexion.com/wp-content/uploads/2021/01/young-real-estate-agent-congratulating-mature-couple-with-buying-new-house-after-signing-documents.jpeg');
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .info-band {
+        min-height: 70vh;
+        background-attachment: scroll; /* Disable parallax on mobile */
+    }
+    
+    .info-band h3 {
+        font-size: 2rem;
+    }
+    
+    .band-content {
+        padding: 1.5rem;
+    }
+}

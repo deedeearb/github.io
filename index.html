@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Real Estate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007bff">
+    <!-- For PWA icons (generate and replace paths) -->
+    <link rel="icon" href="icons/icon-192x192.png" sizes="192x192">
+    <link rel="icon" href="icons/icon-512x512.png" sizes="512x512">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Austin Real Estate</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="parallax"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Discover Austin Real Estate</h1>
+            <p>Your gateway to vibrant homes in the heart of Texas.</p>
+            <a href="#properties" class="btn">Explore Properties</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Austin Real Estate</h2>
+        <p>Austin offers a dynamic mix of modern living, tech innovation, and natural beauty. From sleek downtown condos to spacious suburban homes, find your perfect spot in this thriving city.</p>
+    </section>
+
+    <section class="info-band band-1">
+    <div class="band-overlay"></div>
+    <div class="band-content">
+        <h3>Unlock Your Dream Home with Smart Financing</h3>
+        <p>Getting a mortgage in Austin doesn't have to be complicated. Explore options tailored to today's market.</p>
+        <ul>
+            <li>Conventional loans for strong credit</li>
+            <li>FHA loans with lower down payments</li>
+            <li>Local Texas programs for first-timers</li>
+        </ul>
+        <a href="#contact" class="btn">Get Pre-Approved Today</a>
+    </div>
+</section>
+
+<section class="info-band band-2">
+    <div class="band-overlay"></div>
+    <div class="band-content">
+        <h3>What Credit Score Do You Need to Buy in Austin?</h3>
+        <p>A solid credit score opens doors to better rates and approvals.</p>
+        <ul>
+            <li>620+ for most conventional loans</li>
+            <li>580+ possible with FHA options</li>
+            <li>Tips to boost your score quickly</li>
+        </ul>
+        <a href="#contact" class="btn">Check Your Options</a>
+    </div>
+</section>
+
+<section class="info-band band-3">
+    <div class="band-overlay"></div>
+    <div class="band-content">
+        <h3>Why Austin Neighborhoods Are Booming</h3>
+        <p>From vibrant downtown to family-friendly suburbs, Austin has it all.</p>
+        <ul>
+            <li>Tech hubs driving growth</li>
+            <li>Top-rated schools and parks</li>
+            <li>Diverse communities for every lifestyle</li>
+        </ul>
+        <a href="#contact" class="btn">Find Your Neighborhood</a>
+    </div>
+</section>
+
+<section class="info-band band-4">
+    <div class="band-overlay"></div>
+    <div class="band-content">
+        <h3>First-Time Buyer? We've Got Your Guide</h3>
+        <p>Navigate the Austin market with confidence – from offer to closing.</p>
+        <ul>
+            <li>Step-by-step buying process</li>
+            <li>Down payment assistance info</li>
+            <li>Expert tips for competitive offers</li>
+        </ul>
+        <a href="#contact" class="btn">Start Your Journey</a>
+    </div>
+</section>
+
+    <section id="properties">
+        <h2>Featured Properties</h2>
+        <div class="property-grid">
+            <div class="property">
+                <img src="https://plus.unsplash.com/premium_photo-1725408025985-4e2a24c03133?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0" alt="Modern suburban home">
+                <h3>Suburban Retreat</h3>
+                <p>Spacious single-story home with modern amenities.</p>
+            </div>
+            <div class="property">
+                <img src="https://images.unsplash.com/photo-1766923475286-b2fb204cf95e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0" alt="Modern apartment building">
+                <h3>Urban Apartment</h3>
+                <p>Contemporary living in the city center.</p>
+            </div>
+            <div class="property">
+                <img src="https://images.unsplash.com/photo-1758448756880-01dbaf85597d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0" alt="Modern home with lawn">
+                <h3>Green Oasis</h3>
+                <p>Eco-friendly home with lush surroundings.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Austin Real Estate. All rights reserved. Images from Unsplash.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log('Service Worker registered'))
+                .catch(err => console.error('Service Worker registration failed', err));
+        }
+    </script>
+</body>
+</html>
